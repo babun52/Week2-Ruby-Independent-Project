@@ -1,5 +1,6 @@
 class Word
   attr_reader(:vocab)
+
   @@words = []
 
   define_method(:initialize) do |attributes|

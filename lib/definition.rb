@@ -1,5 +1,5 @@
 class Definition
-attr_reader(:description)
+  attr_reader(:description)
 
   define_method(:initialize) do |attributes|
     @description = attributes.fetch(:description)
@@ -10,6 +10,6 @@ attr_reader(:description)
   end
 
   define_singleton_method(:all) do
-    @description = []
+    @@definitions = []
   end
 end

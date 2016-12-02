@@ -8,4 +8,8 @@ attr_reader(:description)
   define_method(:description) do
     @description
   end
+
+  define_singleton_method(:all) do
+    @description = []
+  end
 end

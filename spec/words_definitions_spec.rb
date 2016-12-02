@@ -48,3 +48,12 @@ describe(Word) do
     end
   end
 end
+
+describe(Definition) do
+  describe('#description') do
+    it('returns the definition of a word') do
+      test_definition = Definition.new({:description => "a school where people from all walks of life come together to learn web and mobile development"})
+      expect(test_definition.description()).to(eq("a school where people from all walks of life come together to learn web and mobile development"))
+    end    
+  end
+end

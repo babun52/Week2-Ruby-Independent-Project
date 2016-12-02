@@ -14,4 +14,11 @@ describe(Word) do
       expect(Word.all()).to(eq([]))
     end
   end
+  describe('#save') do
+    it('saves the word that user input into an empty array') do
+      test_word = Word.new({:vocab => "Epicodus"})
+      test_word.save()
+      expect(Word.all()).to(eq([test_word]))
+    end
+  end
 end

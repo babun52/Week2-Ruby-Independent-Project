@@ -68,4 +68,11 @@ describe(Definition) do
       expect(Definition.all()).to(eq([test_definition]))
     end
   end
+  describe('.clear') do
+    it('erases all of the saved definitions') do
+      test_definition = Definition.new({:description => "a school where people from all walks of life come together to learn web and mobile development"}).save()
+      Definition.clear()
+      expect(Definition.all()).to(eq([]))
+    end
+  end
 end

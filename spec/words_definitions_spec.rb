@@ -21,4 +21,11 @@ describe(Word) do
       expect(Word.all()).to(eq([test_word]))
     end
   end
+  describe('.clear') do
+    it('empties all input words out from the array') do
+      test_word = Word.new({:vocab => "Epicodus"}).save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
 end

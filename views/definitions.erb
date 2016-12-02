@@ -1,0 +1,6 @@
+<h1>Definitions</h1>
+<ul>
+  <% @definitions.each() do |definition| %>
+    <li><a href="/definition/<%= definition.id() %>"><%= definition.description() %></a></li>
+  <% end %>
+</ul>

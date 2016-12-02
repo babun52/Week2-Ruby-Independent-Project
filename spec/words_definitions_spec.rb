@@ -47,6 +47,20 @@ describe(Word) do
       expect(Word.find(test_word.id())).to(eq(test_word))
     end
   end
+  describe('#names') do
+    it("initially returns an empty array of definition for the word") do
+      test_word = Word.new({:vocab => "Epicodus"})
+      expect(test_word.names()).to(eq([]))
+    end
+  end
+  describe('#add_definition') do
+    it("adds a new definition to a word") do
+      test_definition = Definition.new({:description => "a school where people from all walks of life come together to learn web and mobile development"})
+      test_word = Word.new({:vocab => "Epicodus"})
+      test_word.add_definition(test_definition)
+      expect(test_word.names()).to(eq([test_definition]))
+    end
+  end
 end
 
 describe(Definition) do

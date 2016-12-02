@@ -6,6 +6,7 @@ class Word
   define_method(:initialize) do |attributes|
     @vocab = attributes.fetch(:vocab)
     @id = @@words.length() + 1
+    @names = []
   end
 
   define_method(:vocab) do
@@ -28,6 +29,10 @@ class Word
     @id
   end
 
+  define_method(:names) do
+    @names
+  end
+
   define_singleton_method(:find) do |identification|
     find_word = nil
     @@words.each() do |word|
@@ -36,5 +41,8 @@ class Word
       end
     end
     find_word
+  end
+  define_method(:add_definition) do |definition|
+    @names.push(definition)
   end
 end

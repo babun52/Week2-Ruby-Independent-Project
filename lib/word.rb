@@ -4,6 +4,7 @@ class Word
 
   define_method(:initialize) do |attributes|
     @vocab = attributes.fetch(:vocab)
+    @id = @@words.length() + 1
   end
 
   define_method(:vocab) do
@@ -20,5 +21,9 @@ class Word
 
   define_singleton_method(:clear) do
     @@words = []
+  end
+
+  define_method(:id) do
+    @id
   end
 end

@@ -3,6 +3,10 @@ require('word')
 require('definition')
 
 describe(Word) do
+  before() do
+    Word.clear()
+  end
+
   describe('#vocab') do
     it('will return a word/vocabulary') do
       test_word = Word.new({:vocab => "Epicodus"})
@@ -26,6 +30,12 @@ describe(Word) do
       test_word = Word.new({:vocab => "Epicodus"}).save()
       Word.clear()
       expect(Word.all()).to(eq([]))
+    end
+  end
+  describe('#id') do
+    it('gives the identification of the word') do
+      test_word = Word.new({:vocab => "Epicodus"})
+      expect(test_word.id()).to(eq(1))
     end
   end
 end

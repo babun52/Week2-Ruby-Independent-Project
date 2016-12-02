@@ -82,5 +82,13 @@ describe(Definition) do
       expect(test_definition.id()).to(eq(1))
     end
   end
-
+  describe('.find') do
+    it('returns the definition by its id') do
+      test_definition = Definition.new({:description => "a school where people from all walks of life come together to learn web and mobile development"})
+      test_definition.save()
+      test_definition2 = Definition.new({:description => "a person who writes code for computer programs"})
+      test_definition2.save()
+      expect(Definition.find(test_definition.id())).to(eq(test_definition))
+    end
+  end
 end

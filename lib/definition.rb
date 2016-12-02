@@ -27,4 +27,13 @@ class Definition
   define_method(:id) do
     @id
   end
+  define_singleton_method(:find) do |id|
+    find_definition = nil
+    @@definitions.each() do |definition|
+      if definition.id() == id
+        find_definition = definition
+      end
+    end
+    find_definition
+  end
 end

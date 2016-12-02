@@ -38,4 +38,13 @@ describe(Word) do
       expect(test_word.id()).to(eq(1))
     end
   end
+  describe('.find') do
+    it('will find and return a word by its id number') do
+      test_word = Word.new({:vocab => "Epicodus"})
+      test_word.save()
+      test_word2 = Word.new({:vocab => "programmer"})
+      test_word2.save()
+      expect(Word.find(test_word.id())).to(eq(test_word))
+    end
+  end
 end

@@ -26,4 +26,14 @@ class Word
   define_method(:id) do
     @id
   end
+
+  define_singleton_method(:find) do |identification|
+    find_word = nil
+    @@words.each() do |word|
+      if word.id() == identification
+        find_word = word
+      end
+    end
+    find_word
+  end
 end

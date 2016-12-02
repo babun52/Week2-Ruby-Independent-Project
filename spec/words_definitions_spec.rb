@@ -75,4 +75,12 @@ describe(Definition) do
       expect(Definition.all()).to(eq([]))
     end
   end
+  describe('#id') do
+    it('give an id to an inputted definition') do
+      test_definition = Definition.new({:description => "a school where people from all walks of life come together to learn web and mobile development"})
+      test_definition.save()
+      expect(test_definition.id()).to(eq(1))
+    end
+  end
+
 end

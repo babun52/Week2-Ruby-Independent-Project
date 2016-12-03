@@ -5,7 +5,7 @@ class Word
 
   define_method(:initialize) do |attributes|
     @vocab = attributes.fetch(:vocab)
-    @id = @@words.length() + 1
+    @id = @@words.length() + (1)
     @names = []
   end
 

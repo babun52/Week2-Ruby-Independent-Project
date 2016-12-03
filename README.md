@@ -10,18 +10,25 @@ _The homepage of the app should list all words, and let user click on them to vi
 
 ## Setup/Installation Requirements
 
-* __
-* __
-* __
+* _Clone this repository_
+* _Run $ bundle_
+* _Run $ ruby app.rb_
+* _Browse localhost:4567 in your web browser_
 
+* _Heroku: _
 
 ## Support and contact details
 
-__
+_Github: https://github.com/babun52_
+_Email: babun5209@gmail.com_
+
+## Known Bugs
+
+_When I refresh the page for a list word and definition, it shows 'Confirm Form Resubmission, then keeps adding an additional word and definition._
 
 ## Technologies Used
 
-__
+_Ruby, Sinatra, Capybara_
 
 ### License
 

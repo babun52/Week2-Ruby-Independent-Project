@@ -1,6 +1,8 @@
-<h1>Definitions</h1>
+<h1>Definition</h1>
+
+<h3>Here are the definition: </h3>
 <ul>
   <% @definitions.each() do |definition| %>
-    <li><a href="/definition/<%= definition.id() %>"><%= definition.description() %></a></li>
+    <li><a href="/definitions/<%= definition.id() %>"><%= definition.description() %></a></li>
   <% end %>
 </ul>

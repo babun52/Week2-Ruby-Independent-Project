@@ -64,6 +64,10 @@ describe(Word) do
 end
 
 describe(Definition) do
+  before() do
+    Definition.clear()
+  end
+
   describe('#description') do
     it('returns the definition of a word') do
       test_definition = Definition.new({:description => "a school where people from all walks of life come together to learn web and mobile development"})

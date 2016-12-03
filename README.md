@@ -15,7 +15,7 @@ _The homepage of the app should list all words, and let user click on them to vi
 * _Run $ ruby app.rb_
 * _Browse localhost:4567 in your web browser_
 
-* _Heroku: https://git.heroku.com/nameless-garden-37990.git_
+* _Heroku: https://nameless-garden-37990.herokuapp.com/_
 
 ## Support and contact details
 
